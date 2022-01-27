@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Department>
+
+
+
+<a asp-controller="Department" asp-action="CreateDept">Create</a>
+<div class="row">
+    <div class="col-12 ">
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Department Name</th>
+                <th>Created On</th>
+               
+            </tr>
+
+            @foreach (var em in Model)
+            {
+                <tr>
+                    <td>@em.Id</td>
+                    <td>@em.DeptName</td>
+                    <td>@em.CreatedDate</td>
+                   
+
+                    <td><a asp-controller="Department" asp-action="Edit" asp-route-id="@em.Id">Edit</a></td>
+                    <td><a asp-controller="Department" asp-action="Delete" asp-route-id="@em.Id">Delete</a></td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

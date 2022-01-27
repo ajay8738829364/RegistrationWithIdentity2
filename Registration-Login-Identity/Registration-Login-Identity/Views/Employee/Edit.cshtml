@@ -1,0 +1,39 @@
+﻿@model Registration_Login_Identity.Models.Employee
+
+
+
+<div class="row">
+    <div class=" col-6">
+        <form asp-controller="Employee" asp-action="Update" method="post">
+
+            <div class="form-group">
+
+                <input type="hidden" asp-for="empId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input type="text" asp-for="FirstName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input type="text" asp-for="LastName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input type="text" asp-for="Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="MobileNo"></label>
+                <input type="text" asp-for="MobileNo" />
+            </div>
+            <div class="form-group">
+
+                <input type="submit" value="Update" class="btn btn-primery btn-block" />
+            </div>
+
+
+
+        </form>
+
+    </div>
+</div>
